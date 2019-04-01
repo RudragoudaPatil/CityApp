@@ -1,0 +1,14 @@
+<ion-content>
+
+<ion-card *ngFor="let m of list">
+  <ion-card-header>
+      <ion-card-subtitle>Year {{m.year}}</ion-card-subtitle>
+    <ion-card-title>Movie Name:{{m.name}}</ion-card-title>
+    <img src="{{m.image_url}}" >
+  </ion-card-header>
+  <ion-card-content>
+      <ion-label>Rating:{{m.rating}} </ion-label>
+   <ion-button class="danger" (click)="onBooking(m)" slot="end">BookNow</ion-button>
+  </ion-card-content>
+</ion-card>
+</ion-content>
