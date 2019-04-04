@@ -19,4 +19,7 @@ list=[];
   onBooking(m){
   this.router.navigate(['/booking/'+m.id])
   }
+  onLogout(){
+    this.router.navigate(['/login'])
+  }
 }

@@ -15,7 +15,8 @@ export class PaymentComponent implements OnInit {
   
 
   onSubmit(){
-    alert("your booking is done");
-    this.router.navigate(['/movie']);
+    this.router.navigate(['/Successfull']);
   }
+
+
 }

@@ -16,8 +16,9 @@ import { MovieComponent } from './movie/movie.component';
 import { BookingComponent } from './booking/booking.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { BookingSuccessfullComponent } from './booking-successfull/booking-successfull.component';
 @NgModule({
-  declarations: [AppComponent,LoginComponent,RegistrationComponent,MovieComponent,BookingComponent,PaymentComponent,ForgotPasswordComponent],
+  declarations: [AppComponent,LoginComponent,RegistrationComponent,MovieComponent,BookingComponent,PaymentComponent,ForgotPasswordComponent,BookingSuccessfullComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule,HttpClientModule],
   providers: [

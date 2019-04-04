@@ -53,11 +53,33 @@ movies={
   // getMovie(){
   //   this.bookingServi
   // }
-  amount=this.data.tickets*100;
+
   addBooking(booking){
   this.bookingService.addRemoteBooking(booking).subscribe(()=>{   
    this.router.navigate(['/payment']);
    console.log(booking);
 });
 }
+amount=this.data.tickets*50
+// addBooking(booking){
+//   this.movies={
+//   customer_id:2,
+//   tickets:t,
+//   movie_id:movie.id,
+//   movie_name:movie.name,
+//   movie_time:'12:50',
+//   theatre:'Cinepolis Meenakshi Mall',
+//   screen:'Screen 2',
+//   city:'Bangalore',
+//   movie_date:'2019-05-07',
+//   date:'2019-03-27',
+//   amount:this.amount,
+//   ticket_price:50
+//   }
+//   console.log('data sent====>',this.addBooking)
+//   this.bookingService.addRemoteBooking(this.booking).subscribe((e)=>{console.log(JSON.stringify(e));
+//   this.router.navigate(['/payment'])
+//   });
+  
+// }
 }

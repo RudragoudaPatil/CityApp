@@ -25,8 +25,6 @@ export class LoginComponent implements OnInit {
     for(var i=0;i<this.customers.length;i++){
   if ((this.customer.name == this.customers[i].name) && (this.customer.password == this.customers[i].password)){
   this.router.navigate(['/movie']);
-}else{
-  alert("Please Enter Correct Email and Password")
 }
     }
 

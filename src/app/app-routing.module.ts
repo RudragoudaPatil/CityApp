@@ -6,6 +6,8 @@ import { MovieComponent } from './movie/movie.component';
 import { BookingComponent } from './booking/booking.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { BookingSuccessfullComponent } from './booking-successfull/booking-successfull.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
@@ -31,6 +33,10 @@ const routes: Routes = [
 {
   path:'forgotpassword',
   component:ForgotPasswordComponent
+},
+{
+  path:'Successfull',
+  component:BookingSuccessfullComponent
 }
 ];
 
