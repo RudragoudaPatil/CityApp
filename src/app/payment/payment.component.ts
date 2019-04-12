@@ -15,8 +15,7 @@ export class PaymentComponent implements OnInit {
   
 
   onSubmit(){
-    this.router.navigate(['/Successfull']);
+    this.router.navigate(['/success'])
   }
-
-
+ 
 }

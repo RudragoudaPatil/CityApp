@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookingsService } from '../bookings.service';
 import { Router, ActivatedRoute } from '@angular/router';
+declare var RazorpayCheckout:any;
 
 @Component({
   selector: 'app-booking',
@@ -54,13 +55,46 @@ movies={
   //   this.bookingServi
   // }
 
-  addBooking(booking){
-  this.bookingService.addRemoteBooking(booking).subscribe(()=>{   
-   this.router.navigate(['/payment']);
-   console.log(booking);
-});
+  addBooking(){
+//   this.bookingService.addRemoteBooking(booking).subscribe(()=>{   
+//    this.router.navigate(['/payment']);
+//    console.log(booking);
+// });
+
+var options = {
+  description: 'Credits towards consultation',
+  image: 'https://i.imgur.com/3g7nmJC.png',
+  currency: 'INR',
+  key: 'rzp_test_wScHehratCnaID',
+  //order_id: 'order_7HtFNLS98dSj8x',
+ // amount: '500',
+ amount:5000*4, 
+ name: 'Made Payment',
+  prefill: {
+    email: 'pranav@razorpay.com',
+    contact: '8879524924',
+    name: 'Pranav Gupta'
+  },
+  theme: {
+    color: '#F37254'
+  }
 }
-amount=this.data.tickets*50
+
+var successCallback = function(success) {
+  alert('payment_id: ' + success.razorpay_payment_id)
+  var orderId = success.razorpay_order_id
+  var signature = success.razorpay_signature
+}
+
+var cancelCallback = function(error) {
+  alert(error.description + ' (Error '+error.code+')')
+}
+
+RazorpayCheckout.on('payment.success', successCallback)
+RazorpayCheckout.on('payment.cancel', cancelCallback)
+RazorpayCheckout.open(options)
+}
+//amount=this.data.tickets*50
 // addBooking(booking){
 //   this.movies={
 //   customer_id:2,
