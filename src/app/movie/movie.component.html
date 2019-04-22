@@ -1,4 +1,8 @@
-<ion-button class="danger" (click)="onLogout()" >Logout</ion-button>
+
+<ion-button color="danger">
+    Logout
+    <ion-icon slot="end" name="star"  (click)="onLogout()"></ion-icon>
+  </ion-button>
 <ion-content>
 <ion-card *ngFor="let m of list">
   <ion-card-header>

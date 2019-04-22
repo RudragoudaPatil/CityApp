@@ -1,5 +1,6 @@
 
 <ion-content> 
+    <ion-img src="/assets/home.jpg" style="height: 130px" ></ion-img>
   <ion-card> 
    <ion-item >
        <ion-title>Login</ion-title>
@@ -13,7 +14,7 @@
    <ion-item>
        
         <ion-label position="floating"><ion-icon name="lock"  color="danger"></ion-icon> Enter Password</ion-label>
-           <ion-input  [(ngModel)]="customer.password"></ion-input>
+           <ion-input type="password" [(ngModel)]="customer.password"></ion-input>
    </ion-item>
    <ion-grid>
      <ion-row>

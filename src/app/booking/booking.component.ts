@@ -10,6 +10,7 @@ declare var RazorpayCheckout:any;
 })
 export class BookingComponent implements OnInit {
   bookings:[];
+  my_tickets:'';
   sub:any;
   movie_id:any;
   booking:any;
@@ -51,24 +52,19 @@ movies={
     })
   }
 
-  // getMovie(){
-  //   this.bookingServi
-  // }
 
   addBooking(){
-//   this.bookingService.addRemoteBooking(booking).subscribe(()=>{   
-//    this.router.navigate(['/payment']);
-//    console.log(booking);
-// });
 
+ var amountperticket : any=this.my_tickets;
 var options = {
+  
   description: 'Credits towards consultation',
   image: 'https://i.imgur.com/3g7nmJC.png',
   currency: 'INR',
-  key: 'rzp_test_wScHehratCnaID',
+  key: 'rzp_test_gEEko61scsbxmP',
   //order_id: 'order_7HtFNLS98dSj8x',
- // amount: '500',
- amount:5000*4, 
+  // amount: '5000',
+ amount:((amountperticket)*(12000)), 
  name: 'Made Payment',
   prefill: {
     email: 'pranav@razorpay.com',
@@ -81,9 +77,10 @@ var options = {
 }
 
 var successCallback = function(success) {
-  alert('payment_id: ' + success.razorpay_payment_id)
+  alert('Congratulationss your tickets are Booked : ')
   var orderId = success.razorpay_order_id
   var signature = success.razorpay_signature
+  this.router.navigate(['/movie'])
 }
 
 var cancelCallback = function(error) {
@@ -93,7 +90,10 @@ var cancelCallback = function(error) {
 RazorpayCheckout.on('payment.success', successCallback)
 RazorpayCheckout.on('payment.cancel', cancelCallback)
 RazorpayCheckout.open(options)
+
+
 }
+
 //amount=this.data.tickets*50
 // addBooking(booking){
 //   this.movies={
