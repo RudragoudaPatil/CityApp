@@ -93,6 +93,9 @@ RazorpayCheckout.open(options)
 
 
 }
+back(){
+  this.router.navigate(['/movie'])
+}
 
 //amount=this.data.tickets*50
 // addBooking(booking){

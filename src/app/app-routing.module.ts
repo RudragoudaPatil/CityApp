@@ -7,6 +7,8 @@ import { BookingComponent } from './booking/booking.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { BookingSuccessfullComponent } from './booking-successfull/booking-successfull.component';
+import { OfferpageComponent } from './offerpage/offerpage.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -37,6 +39,14 @@ const routes: Routes = [
 {
   path:'Successfull',
   component:BookingSuccessfullComponent
+},
+{
+  path:'offers',
+  component:OfferpageComponent
+},
+{
+  path:'profile',
+  component:ProfileComponent
 }
 ];
 

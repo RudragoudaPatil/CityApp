@@ -7,7 +7,7 @@ import { Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class MovieService {
- private movieUrl= 'http://localhost:3001/api/movies';
+ private movieUrl= 'http://192.168.0.69:3001/api/movies';
   constructor(private http: HttpClient) { }
 
 getRemoteMovies():Observable<[]>{

@@ -17,8 +17,13 @@ import { BookingComponent } from './booking/booking.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { BookingSuccessfullComponent } from './booking-successfull/booking-successfull.component';
+import { OfferpageComponent } from './offerpage/offerpage.component';
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
-  declarations: [AppComponent,LoginComponent,RegistrationComponent,MovieComponent,BookingComponent,PaymentComponent,ForgotPasswordComponent,BookingSuccessfullComponent],
+  declarations: [AppComponent,LoginComponent,RegistrationComponent,
+    MovieComponent,BookingComponent,PaymentComponent,ForgotPasswordComponent,
+    BookingSuccessfullComponent,OfferpageComponent,ProfileComponent
+  ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule,HttpClientModule],
   providers: [

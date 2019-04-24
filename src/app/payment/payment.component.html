@@ -1,15 +1,24 @@
-<ion-button class="danger" (click)="onBack()" >Back</ion-button>
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+           Your Booking Details
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
 <ion-content>
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Please Make a Payment</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-         <ion-item> <ion-checkbox color="primary"></ion-checkbox><h4> Use NetBanking</h4></ion-item>
-         
-       <ion-item><ion-checkbox color="secondary"></ion-checkbox><h4> CREDIT CARD</h4></ion-item>  
-       <ion-item> <ion-checkbox color="primary"></ion-checkbox><h4> PAYTM</h4></ion-item> 
-      </ion-card-content>
-      <ion-button expand="block" (click)="onSubmit()">Submitt</ion-button>
-    </ion-card>
+    <ion-card *ngFor="let book of list">
+        <ion-card-header>
+            <ion-card-subtitle>Time: {{book.movie_time}}</ion-card-subtitle>
+          <ion-card-title>Movie Name: {{book.movie_name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-label style="color:red">{{book.theatre}} </ion-label>
+            <ion-label>City:{{book.city}} </ion-label>
+            <ion-label>Date:{{book.movie_date}} </ion-label>
+            <ion-label style="color:red">Amount:{{book.amount}}</ion-label>
+        </ion-card-content>
+      </ion-card>
     </ion-content>

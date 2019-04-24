@@ -7,8 +7,9 @@ import { Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class RegistrationService {
-  private customerUrl= 'http://localhost:3001/api/customers';
+  private customerUrl= 'http://192.168.0.69:3001/api/customers';
   constructor(private http: HttpClient) { }
+  customera:any=[];
 
   addRemoteCustomer(customer):Observable<any>{
   	return this.http.post(this.customerUrl,customer);
@@ -17,4 +18,8 @@ export class RegistrationService {
   return this.http.get<[]>(this.customerUrl);
 
  }
+ getRemoteCustomerPassword(phone):Observable<any>{
+  return this.http.get<[]>(this.customerUrl+'/'+phone); 
+  
+  }
 }

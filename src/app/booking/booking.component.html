@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
     <ion-toolbar>
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
@@ -7,10 +7,19 @@
               Book Your Tickets
           </ion-title>
          </ion-toolbar>
-</ion-header>
+</ion-header> -->
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+          Book Your Tickets
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
           <ion-content padding>
             <ion-card>
-                    
                                   <ion-card>
                               <ion-img src="{{booking.image_url}}" style="height: 200px"></ion-img>
                                   
@@ -30,18 +39,13 @@
                               <ion-label position="floating">Time</ion-label>
                               <ion-datetime displayFormat="HH:mm"  [(ngModel)]="booking.movie_time"></ion-datetime>
                               </ion-item>
-                              <!-- <ion-item>
-                              <ion-label position="floating">Movie Date</ion-label>
-                                  <ion-input type="text" name="date" [(ngModel)]="booking.movie_date" ></ion-input>
-                              </ion-item> -->
+                    
                               <ion-item>
                                   <ion-label position="floating">Date</ion-label>
                                       <ion-input type="text" name="date" [(ngModel)]="booking.date" ></ion-input>
                                   </ion-item>
-                              <!-- <ion-item>
-                              <ion-label position="floating">Amount</ion-label>
-                                  <ion-input type="text" name="amount" [(ngModel)]="booking.amount" ></ion-input>
-                              </ion-item> -->
+                            
             <ion-button color="primary"  (click)="addBooking()" sise="medium">MakePayMent</ion-button>
+            <ion-button color="danger"  (click)="back()" sise="medium">Back</ion-button>
           </ion-card>
           </ion-content>

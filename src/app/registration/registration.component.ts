@@ -10,12 +10,13 @@ import { Router } from '@angular/router';
 export class RegistrationComponent implements OnInit {
   
   constructor(private registrationService:RegistrationService,private router:Router) { }
-customer={id:'',name:'',email:'',password:'',address:'',phone:''};
+customer={name:'',email:'',password:'',address:'',phone:''};
   ngOnInit() {
 
   }
   addRegistration(customer){
   	this.registrationService.addRemoteCustomer(customer).subscribe(()=>{
+      console.log(customer)
       this.router.navigate(['/movie']);
     });
   }

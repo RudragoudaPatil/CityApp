@@ -1,0 +1,49 @@
+<ion-segment>
+    <ion-segment-button (click)="onHome()">
+      <ion-icon name="home"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button  (click)="onOffer()">
+        <ion-icon name="cafe"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button  (click)="onProfile()">
+        <ion-icon name="contact"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button (click)="onLogout()">
+      <ion-icon name="log-out"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+<ion-content>
+          <ion-img src="../assets/profile.jpg"></ion-img>
+  <ion-card>
+      <ion-list>
+          <ion-item (click)="onBooking()">
+            <ion-label>Booking History</ion-label>
+            <ion-icon name="albums"></ion-icon>
+          </ion-item>
+          <ion-item (click)="onOffer()">
+            <ion-label>Offers for you</ion-label>
+            <ion-icon name="basket"></ion-icon>
+          </ion-item>
+          <ion-item>
+              <ion-label>Wallet</ion-label>
+              <ion-icon name="wallet"></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-label>Refer & Run</ion-label>
+                <ion-icon name="logo-usd"></ion-icon>
+              </ion-item>
+          <ion-item>
+            <ion-label>Feedback</ion-label>
+            <ion-icon name="book"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label>Contact</ion-label>
+            <ion-icon name="call"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label>Payment Details</ion-label>
+            <ion-icon name="cash"></ion-icon>
+          </ion-item>
+        </ion-list>
+    </ion-card>
+</ion-content>

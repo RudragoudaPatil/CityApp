@@ -20,6 +20,20 @@ list=[];
   this.router.navigate(['/booking/'+m.id])
   }
   onLogout(){
+    alert("logout")
     this.router.navigate(['/login'])
+  }
+  segmentChanged(ev: any) {
+    console.log('Segment changed', ev);
+  }
+  onOffer(){
+    this.router.navigate(['/offers'])
+  }
+  onHome(){
+  this.router.navigate(['/movie'])
+  }
+  onProfile(){
+    alert("djdj")
+    this.router.navigate(['/profile'])
   }
 }

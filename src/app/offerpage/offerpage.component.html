@@ -1,3 +1,40 @@
-<p>
-  offerpage works!
-</p>
+<ion-segment>
+    <ion-segment-button (click)="onHome()">
+      <ion-icon name="home"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button  (click)="onOffer()">
+        <ion-icon name="cafe"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button  (click)="onProfile()">
+        <ion-icon name="contact"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button (click)="onLogout()">
+      <ion-icon name="log-out"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-content>
+    <ion-card>
+      <ion-slides #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)" autoplay="5000" loop="true" speed="3000" pager="true">
+          <ion-slide  *ngFor = "let banners of slideData">
+            <img src={{banners.image}}>
+          </ion-slide>
+        </ion-slides>
+      </ion-card>
+  <ion-card>
+    <ion-item>
+        <ion-avatar slot="start">
+            <img src='./assets/offer2.png'>
+          </ion-avatar>
+          <ion-label>Save up to $30 dollars with coupons on demand. Download Now. Delivery Order Now With Grubhub Order NowOrder Now.</ion-label>
+    </ion-item>
+    </ion-card>
+    <ion-card>
+        <ion-item>
+            <ion-avatar slot="start">
+                <img src='./assets/offer2.png'>
+              </ion-avatar>
+              <ion-label>Save up to $30 dollars with coupons on demand. Download Now. Delivery Order Now With Grubhub Order NowOrder Now.</ion-label>
+        </ion-item>
+        </ion-card>
+
+</ion-content>
